@@ -12,9 +12,9 @@
 /* VOICE: direto, técnico, de plataforma — como o treinador fala na mesa de pesagem
    IDEA: o cartão de tentativas entregue à mesa no dia da competição
    PICTURE: cartão grande com 1ª/2ª/3ª de cada movimento, números em Bebas, ao vivo
-   COLOUR and TYPE: preto Barra #1b1a1a, azul #204756/#3C7586, branco; Bebas Neue + Barlow
+   COLOUR and TYPE: só preto e branco, cinzas de apoio; Bebas Neue + Barlow
    LAYOUT: entradas à esquerda, cartão fixo à direita; empilha no celular com o cartão logo após o título */
-:root{color-scheme:dark;--bg:#151616;--panel:#1f2021;--line:#2e3133;--ink:#f2f3f3;--mute:#9aa3a7;--teal:#3C7586;--deep:#204756;--hi:#7fc3d6;--bad:#d9634f}
+:root{color-scheme:dark;--bg:#0d0d0d;--panel:#171717;--line:#2c2c2c;--ink:#f5f5f5;--mute:#a3a3a3;--teal:#ffffff;--deep:#ffffff;--hi:#ffffff;--bad:#ff6b5a}
 :root[data-theme=light],:root[data-theme=dark]{color-scheme:dark}
 *{box-sizing:border-box;min-width:0}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 Barlow,system-ui,sans-serif;overflow-x:clip}
@@ -35,30 +35,30 @@ input:focus,select:focus,button:focus-visible{outline:2px solid var(--hi);outlin
 .lift{border-top:1px solid var(--line);padding-top:12px;margin-top:12px}.lift:first-of-type{border:0;margin:0;padding:0}
 .lift h3{font-size:21px;margin-bottom:6px}
 .row{display:flex;gap:8px;flex-wrap:wrap;align-items:end}.row>div{flex:1 1 180px}
-.btn{min-height:44px;border-radius:9px;border:1px solid var(--teal);background:var(--deep);padding:8px 16px;font-weight:600;cursor:pointer}
-.btn.ghost{background:transparent;border-color:var(--line)}
+.btn{min-height:44px;border-radius:9px;border:1px solid #fff;background:#fff;color:#0d0d0d;padding:8px 16px;font-weight:600;cursor:pointer}
+.btn.ghost{background:transparent;border-color:var(--line);color:var(--ink)}
 .opts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
 .opt input{position:absolute;opacity:0;pointer-events:none}
 .opt span{display:block;height:100%;border:1px solid var(--line);border-radius:10px;padding:10px 12px;cursor:pointer;background:#141515}
 .opt b{display:block;font-size:16px;color:var(--ink)}.opt span{font-size:13px;color:var(--mute)}
-.opt input:checked+span{border-color:var(--hi);background:var(--deep)}
+.opt input:checked+span{border-color:#fff;background:#fff;color:#444}.opt input:checked+span b{color:#0d0d0d}
 .opt input:focus-visible+span{outline:2px solid var(--hi)}
-.card{position:sticky;top:16px;background:#f4f5f2;color:#151616;border-radius:16px;overflow:hidden;box-shadow:0 18px 50px rgba(0,0,0,.45)}
-.card-h{background:#204756;color:#fff;padding:16px 20px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.card{position:sticky;top:16px;background:#fff;color:#0d0d0d;border-radius:16px;overflow:hidden;box-shadow:0 18px 50px rgba(0,0,0,.45)}
+.card-h{background:#2b2b2b;color:#fff;padding:16px 20px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 .card-h .bb{font-size:30px}.card-h p{margin:0;font-size:14px;opacity:.85}
-.days{text-align:right}.days .bb{font-size:34px;color:#bfe6f1}
+.who{display:flex;align-items:center;gap:14px}.cmark{height:52px;width:auto;flex:none}@media(max-width:600px){.cmark{height:42px}}.days{text-align:right}.days .bb{font-size:34px;color:#fff}
 .att{padding:6px 20px 0}
 .lr{display:grid;grid-template-columns:5.6em repeat(3,minmax(0,1fr));gap:8px;align-items:center;padding:12px 0;border-bottom:1px dashed #c9cfcf}
 .lr .nm .bb{font-size:24px}.lr .nm small{display:block;font-size:12px;color:#5a6366;white-space:nowrap}
-.cell{text-align:center;border-radius:10px;background:#e6eaea;padding:8px 4px}
+.cell{text-align:center;border-radius:10px;background:#ececec;padding:8px 4px}
 .cell.th{background:transparent;padding:0;font-size:12px;font-weight:700;color:#5a6366}
 .cell .bb{font-size:clamp(26px,3.2vw,36px);display:block}.cell small{font-size:12px;color:#5a6366}
-.cell.k{background:#204756;color:#fff}.cell.k small{color:#cfe7ee}
+.cell.k{background:#0d0d0d;color:#fff}.cell.k small{color:#bdbdbd}
 .tot{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;padding:14px 20px}
-.tot div{background:#151616;color:#fff;border-radius:10px;padding:10px 12px}
-.tot small{display:block;font-size:12px;color:#9fb6bd}.tot .bb{font-size:30px}
+.tot div{background:#0d0d0d;color:#fff;border-radius:10px;padding:10px 12px}
+.tot small{display:block;font-size:12px;color:#bdbdbd}.tot .bb{font-size:30px}
 .card-f{padding:0 20px 18px;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
-.card-f .btn{color:#fff}.card-f .note{font-size:12px;color:#5a6366;flex:1 1 220px}
+.card-f .btn{color:#fff;background:#0d0d0d;border-color:#0d0d0d}.card-f .note{font-size:12px;color:#5a6366;flex:1 1 220px}
 details{margin:0 20px 18px;border:1px solid #c9cfcf;border-radius:10px;padding:10px 14px}
 summary{cursor:pointer;font-weight:700;min-height:28px}
 .wu{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:10px;font-size:14px}
@@ -67,15 +67,15 @@ summary{cursor:pointer;font-weight:700;min-height:28px}
 .how{grid-column:1/-1;color:var(--mute);font-size:15px}
 .how h2{font-size:26px;color:var(--ink);margin-bottom:6px}
 .how p{max-width:75ch}
-.cta{grid-column:1/-1;background:linear-gradient(120deg,#204756,#3C7586);border-radius:16px;padding:24px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.cta{grid-column:1/-1;background:#fff;color:#0d0d0d;border-radius:16px;padding:24px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
 .cta h2{font-size:32px}.cta p{margin:4px 0 0}
-.cta a{background:#fff;color:#151616;text-decoration:none;font-weight:700;border-radius:10px;padding:12px 20px;min-height:44px;display:inline-flex;align-items:center}
+.cta a{background:#0d0d0d;color:#fff;text-decoration:none;font-weight:700;border-radius:10px;padding:12px 20px;min-height:44px;display:inline-flex;align-items:center}
 .sample{font-size:12px;color:var(--hi);margin:0 0 10px}
 .toast{min-height:20px;font-size:13px;color:var(--hi);margin-top:8px}
 .warn{color:var(--bad)}
 @media(max-width:900px){.wrap{grid-template-columns:minmax(0,1fr)}.card{position:static}}
 @media(max-width:600px){.g3{grid-template-columns:repeat(2,minmax(0,1fr))}.opts{grid-template-columns:minmax(0,1fr)}.lr{grid-template-columns:4.2em repeat(3,minmax(0,1fr));gap:6px}.wu{grid-template-columns:minmax(0,1fr)}.tot .bb{font-size:24px}.att,.tot{padding-inline:12px}.card-h{padding:14px 12px}}
-@media(prefers-reduced-motion:no-preference){.cell .bb{transition:color .3s}.flash .bb{color:#3C7586}}
+@media(prefers-reduced-motion:no-preference){.cell .bb{transition:color .3s}.flash .bb{color:#777}}
 </style>
 </head>
 <body>
@@ -122,7 +122,7 @@ summary{cursor:pointer;font-weight:700;min-height:28px}
   <aside class="res">
     <div class="card" id="card" aria-live="polite">
       <div class="card-h">
-        <div><span class="bb" id="cName">Atleta</span><p id="cMeta"></p></div>
+        <div class="who"><img class="cmark" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGMAAACMCAYAAABoKRfCAAALj0lEQVR42u2de6zcRRXHP+e39/ZhrRJBbHlUCqQNaFWiIYA8lEixFeUhKEh5RMAIWKSYGhVUEqwQMDwjiBAIGC0IiaCg5WURUAvEEEysBkPRaFFRKlDl9rG7X//4nYFhvbfc7u7d3++3O5Nsurm9dx/znfOZMzPnnAFA0hy8SaqRWiEt83/PkPQDSZPMrCFpKHVNcWJsAI4DfiFpTzOrSxqSZKmLei+GAQ1gH+CXko41s7pjK0vd1FsxAGrARmAbYLmkS4GamTUTtnovRhBEbiVLgAck7Rqwlbqrt2IEZNWAOnAg8GtJh7sglrDVWzFCG3IL2R64Q9I3ABxbyf3tsRgBW01/nAuskLRTcn+LESP8TubYmu/Ymu/YyhK2eitGK7Z2cgv5ipk1E7aKESPGFsAySXdI2j5hqxgxwt+YY+twx9aBjq1aWrX3VowYW3VgV1+PLDGzhpkpYav3YgRBmo6vSyXdImm7hK1ixIhfow580rG1f8JWMWKEVXvA1u7AzyWdnbBVjBit2BoCLvMzkjcnbBUjRiu2jgN+Jel9CVvFiNGKrT2BhyR9JsJWWrX3UIxWbE0FrpV0vaRp6YykGDHCe8it5BTgYUnz0tFuMWK0Ymsv8qPdRWZWT9jqvRitm43Tge9JutIjUhK2ChCDlqPdxcBKSXMStooRo/Vodz93f48e9IiUor90wNa2wG2SLs5PdgfzjKQMIzBgqwksBe6TNGsQV+1lwYFFR7sHA6skLRy0o92yfcmArZnA3ZK+PkhHu2UccXFEyvmS7pY0cxCwlZX4cwVsLXRsHRxhy5IYxWFrlk/sSx1bfXlGUoWJMWDLgIsl3SZp237EVlaxz1kHjvZF4n79dkZSJZcx3myc49soi/vpjKSKXyCckUwCrpR0s6Tp/bDZGIvRqNjnDmckJ5BvyYf0t6wf0sjCRKkKYmse+dHux/N9xmoKEpJfZgJXAUe6GKoYwuouzFNmNrfKliEzW2tmRwFfjoSoIrY2Bc+qih5W5p6IScrM7CLgUOAv0XlDlbyt6W4h1Z0zzEzBGzGz+8lTkFdEnkuzAkLgHtaUvnBtwyLKzJ41swXABdE+URWwNdkf/bHO8G2GzLH1NeAo4O8VwVZsGdYXi77oDGHIzH5Efk79YLRxpxJbxpS+XIGHiA0zewb4EPAttxArGbaCFQz3rRiRIBnQNLOl5DkY/y4htoK1Tu0rTI2GLffdh8zsh46tVSXDVvgM07b6D921L3rlPu43d/c3YOsPwAeAq0uIrWljdHbo8JoHyw358yy49kWftW/1SAjYMrONZnYmcDKwvgTYCpYx3XdvWzs7dHjDY3zr/rwpaVjSjlGIUCFHu22tVv0LmK/gb5L0BHAT8B63kKwAZuvVj2f1eGBIGiYv3TTTH7uQH+XuAuwMzPCfNyV9wcyuDyUCzazRay+k/R7IsVWX9EbyzcaT/b+aPd5sbLh1Xgs8Sp5buAuwA3lVh+1ckPG064Czzezl8P16M5ycpx2+Ri16frqkEeVts8rXGv65wqPuP2v6o+6/97ikd4bv11NsdepJuKg1f763pNWRIM0ednbzdTp7PC0MohckHR97XBMtwgxJkwJyuoEt/3cbScujDmqoWq0ePb/C5x0m9GhX0mmSVkUmaV2wkhhb50QjbXPFBImx9Yik3YIgE4ItScf7m/1H0tLocGaoi9g6SNLTBWGrGy0Mon9KOmrCsCXphIipkrRS0rwuWknA1tu8JFI/YOvC0C9dXSS6GOHNNkdWck5rh3YJW+dGwtcriK0wiO6XNKur80gkRmOUDnpA0juCt9WJlcR/L2m+pLUVnUfiz/yspAXd6J+xxIjdQ0laL2lJF60kYGu2Ow5hADQrjK2vdqWwv6RFo4gx2hveJ2nPbswl0cQ+WdI1Y7xfFVoj6rcfS5rR0YCVdPIWxGh1716SdFY3rCQW0wfEuj7A1hpJH2wbW5LOGueojP//HklzO2Vli/u7h6RH+wBbdUlfagdbWZvJ9POBxyR9Lj4vb2P3VyHPwsx+DxwEfCc6Iyl7iNBoeSQZcKGku7a2smnWZjJ9A3gTcJWkn0ma20lmahQitMHMTgc+Dfw3SiWjgnkkHyHPIzlovIX9sy6UnPiw59yd0aGVNAK2zOxG4ADgtxWISNlSQPZu5Olvx4xHkKwLJScafk7wbc9M3b1dK2nB1hPA/sDNFcVWGERDwK2STnw9QbIuF2ZZCDwu6bMdWknA1nozOwk4k/yilaphqxZF9d8UbuwZq0+yLhdmCVZyjaSfSNqtAyuJsXU1eQDEUxECVLF5pAncIGmvMNgmOo0stpLD3OM6rV0racHWKmBf4Pbo7L5ZsZSFqeQFa7YbLaknm8DyRQ3gLcB3Jd0paXYHVhKwtc7MjgG+GLmRjQohK0zqV3ksmvUqwTK2ko/5XHJqB1bSiPJILgEOAf5UsTySgNhjJR3i36nWq2zX2Eq2Ba7zM43Z7URctOSRrCTPI7mrQnkkcZ9fLmmq48p6mXpci7JTDwcelXSiB491skj8h5l9FPhmhfJIsqje7yLHVa3XeeDBSjYDb/Wgtx18pGdtLhIzSWZm5wILgDUVwZb54FzsmGoUkZQfVqcCRjp+sVeLugyZ2Qr3tu6sALYCKeYBh4bCNFnBlde682KvYus5MzsCOK8C2AqLwdOqXK5iPN7WMt8zW1tibIV45AMkbWNmjb6q/dfibd3j3ta9EbZUsnmj6V7mPn1lGWNg669uIcuikVgmbIU5bX7fihF7W/78POAI4LmSYSuswOf1tRijpL/d6d7WwyXCVhDj7ZKG+75ebJT+VjOzNeR1cy8vCbaCGDOAnQam5niErYaZLSG/guiFgrEVxJgObD9QBeBbsHULedbuYyU52h0euGr8LVm7o0WkFJUYOnlgb3QZJSLlFODFaGXc84800NfrRKv2YTO7gTxEyHosRrDGlwf+riMzk6cc18iLnhVV6sLSxVORlZCXSCLVtaVUxWCSGKTbyFJLYqSWxEhipJbESGKklsRIYqSWxEhipJbESGKkRlHJG5TgmqFMKnbDVPkHsEEWY6MHCRQdLR4CFTYNqhgGzPITNiv4LCFEq+8waGLEV/KsLFkwclbkDQNFY2pqmrbLI4ZKfJlWIWLYIH7xsq4zNqSOKY8YG1M3lEeMKakbStGUAX9MmCrcgRkBns/IcxSUxCi0jQAvZeS3U75YYldzECzjX8EyngWeTmIUKsZqM9uUeRT276hWMa1+EkPAk/FezMNpEi+0SsIjr3S+pB3J6/+9IU3m9HLbPiPPCZlrZiPhqum1bh2qUJm5fhAD4G4zG5E0lEWoutEtIllFb4tI3hzmj/iOviHgCfIKYa9UB0uNibzgcYWZLXA6NYM3VTOzzcBFyTJ62pbFjpO13GdR85l970i91CbGKm43s2OCVbSKUfNU3HeTVw2oFXRh7iBM2uuAd/nuhwUxspac6JqZPQmcX7F6sVVzZ88ys7/5rdHNsYLYQhWzC4FbgGHyapupdd42u5N0iZkt935ubPHY070rcyHuBQ70FxpO/dmREMPAcjP7lIcnNd15Gju8M/yCmW0EjgQeiiwkbSSy1XtPde+/24GT3FH6PyHGjLUNhX/NbB1wKHBbZBlpM3H8XlOo43uFF9SvAxpNiC0GPkeCbDCzTwAXRBNQPYmyxUk6uK/rgcVmdnZUL1Fth8qEOcTF2Q+4EnhvpD7JBUbR4Axrs/uBz5vZ6rHmiLbjlnz2r0uaApwKLAbmRL9Sj/a2+n2PS7y2LlW8OP4NcJmZfT/uN7odRBavFiVNAxb5Y99RVuvqQ5SNFYs74jsXNwK3OkUsXtBNSESfv0kW+8h+M/JhwPuBPYCdgcl9bBkvA38GVgMPAj/1yqCv2c2gV+GVLkrNq2Eq+vlkYHdgFnnx3EnApoq7xaGq/zPA8+QHQmti/PgEbeOZG8Zq/wNKvgiVU85vdAAAAABJRU5ErkJggg==" alt="Barra Powerlifting Club"><div><span class="bb" id="cName">Atleta</span><p id="cMeta"></p></div></div>
         <div class="days"><span class="bb" id="cDays">—</span><p id="cDaysL">até a prova</p></div>
       </div>
       <div class="att">
@@ -139,7 +139,7 @@ summary{cursor:pointer;font-weight:700;min-height:28px}
         <button class="btn" id="copy" type="button">Copiar resumo</button>
         <span class="note">Use como ponto de partida. No dia, ajuste a 2ª e a 3ª pela velocidade de cada tentativa.</span>
       </div>
-      <div class="toast" id="toast" style="padding:0 20px 12px;color:#204756"></div>
+      <div class="toast" id="toast" style="padding:0 20px 12px;color:#0d0d0d"></div>
     </div>
   </aside>
 
